@@ -1,13 +1,4 @@
-// Mark-1
 
-//welcome :readlinesync
-//define score
-//use play function and condition to update score
-//array of objects i.e. ques. & ans.
-// access array using for loop
-//final thank you message.
-
-// welcome user
 var readlineSync = require("readline-sync");
 
 var userName = readlineSync.question("Please, Enter your name : ");
@@ -20,7 +11,6 @@ console.log("");
 
 var score = 0;
 
-//function use to know an answer is right or wrong and calculate score
 
 function play(question,answer){
   var userAnswer = readlineSync.question(question); //i.e. Question1=answer1
@@ -31,12 +21,12 @@ function play(question,answer){
     console.log("Your answer is wrong.");
   }
   
-  console.log("Your Current Score is : ", score); //as we only want correct score, we aren't penalizing them for mistake
+  console.log("Your Current Score is : ", score);
 
   console.log(" ");
 }
 
-// defining objects and using them in an array
+
 
 var quiz =[{ 
   question :"What is my name ? \nYour response : ",
@@ -64,7 +54,6 @@ var quiz =[{
   }]
 
   
-  //accessing array objects through for loop
   
   for(i=0;i<quiz.length;i++){
     var currentQuestion =quiz[i];
@@ -74,7 +63,6 @@ var quiz =[{
   console.log("Yay! Your final score is : ", score);
 
 
-//data of high score
 
 var highScores =[{
   name:"Nitesh",
